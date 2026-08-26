@@ -1,1 +1,2446 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>English Book A1 — Unit 1</title>
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root {
+    --blue: #2857d9;
+    --dark-blue: #17233b;
+    --pink: #b62b70;
+    --background: #eef2f7;
+    --white: #ffffff;
+    --soft: #f4f7fb;
+    --border: #dfe5ee;
+    --text: #182230;
+    --muted: #687386;
+    --success: #e8f7ef;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.navbar {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        14px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+
+    font-weight: 900;
+
+    letter-spacing: 0.06em;
+
+    color: var(--dark-blue);
+}
+
+.navbar a {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    margin-left: 18px;
+
+    font-size: 0.9rem;
+}
+
+.navbar a:hover {
+
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+
+    max-width: 1050px;
+
+    margin:
+        30px auto;
+
+    padding:
+        0 20px;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+
+    background: var(--white);
+
+    padding: 32px;
+
+    border-radius: 24px;
+
+    margin-bottom: 24px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(24,34,48,0.07);
+}
+
+h2 {
+
+    font-size: 1.8rem;
+
+    margin-top: 0;
+}
+
+h3 {
+
+    margin-top: 28px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--dark-blue),
+            var(--blue)
+        );
+
+    color: white;
+
+    padding:
+        60px 45px;
+
+    border-radius: 30px;
+}
+
+.eyebrow {
+
+    text-transform: uppercase;
+
+    letter-spacing:
+        0.16em;
+
+    font-size:
+        0.8rem;
+
+    font-weight: 800;
+
+    opacity:
+        0.8;
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(2.5rem, 7vw, 5rem);
+
+    line-height:
+        1;
+
+    margin:
+        12px 0;
+}
+
+.hero p {
+
+    font-size:
+        1.1rem;
+
+    max-width:
+        700px;
+}
+
+.badge {
+
+    display:
+        inline-block;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    padding:
+        7px 14px;
+
+    border-radius:
+        20px;
+
+    margin-top:
+        10px;
+}
+
+
+/* =========================================================
+   GOALS
+========================================================= */
+
+.grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap:
+        12px;
+}
+
+.goal {
+
+    background:
+        var(--soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        14px;
+
+    padding:
+        15px;
+}
+
+.goal::before {
+
+    content:
+        "✓";
+
+    color:
+        var(--blue);
+
+    font-weight:
+        900;
+
+    margin-right:
+        8px;
+}
+
+
+/* =========================================================
+   CONVERSATION
+========================================================= */
+
+.conversation {
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    overflow:
+        hidden;
+}
+
+.turn {
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    padding:
+        15px 18px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.turn:last-child {
+
+    border-bottom:
+        none;
+}
+
+.turn.lucas {
+
+    background:
+        #edf3ff;
+}
+
+.turn.emma {
+
+    background:
+        #fff0f6;
+}
+
+.turn .speaker {
+
+    width:
+        60px;
+
+    font-weight:
+        900;
+}
+
+.turn.lucas .speaker {
+
+    color:
+        var(--blue);
+}
+
+.turn.emma .speaker {
+
+    color:
+        var(--pink);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+
+    border:
+        none;
+
+    border-radius:
+        11px;
+
+    padding:
+        10px 15px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+}
+
+.primary {
+
+    background:
+        var(--blue);
+
+    color:
+        white;
+}
+
+.secondary {
+
+    background:
+        #e9efff;
+
+    color:
+        var(--text);
+}
+
+button:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   VOCABULARY
+========================================================= */
+
+.vocabulary-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap:
+        10px;
+}
+
+.vocabulary-card {
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        14px;
+
+    padding:
+        13px 15px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+}
+
+.vocabulary-card strong {
+
+    display:
+        block;
+
+    font-size:
+        1rem;
+}
+
+.pronunciation {
+
+    display:
+        block;
+
+    color:
+        var(--muted);
+
+    font-family:
+        Georgia,
+        serif;
+}
+
+.translation {
+
+    display:
+        block;
+
+    color:
+        #526070;
+
+    font-size:
+        0.9rem;
+}
+
+.speak {
+
+    background:
+        #e9efff;
+
+    padding:
+        8px 10px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+table {
+
+    width:
+        100%;
+
+    border-collapse:
+        collapse;
+}
+
+th,
+td {
+
+    padding:
+        11px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    text-align:
+        left;
+}
+
+th {
+
+    background:
+        var(--soft);
+}
+
+
+/* =========================================================
+   NOTE BOX
+========================================================= */
+
+.note {
+
+    background:
+        var(--soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        14px;
+
+    padding:
+        16px;
+}
+
+
+/* =========================================================
+   PRACTICE
+========================================================= */
+
+.practice {
+
+    background:
+        var(--success);
+
+    border-radius:
+        15px;
+
+    padding:
+        20px;
+}
+
+input,
+select,
+textarea {
+
+    font:
+        inherit;
+
+    padding:
+        10px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius:
+        9px;
+}
+
+textarea {
+
+    width:
+        100%;
+
+    min-height:
+        180px;
+
+    resize:
+        vertical;
+}
+
+.answer {
+
+    display:
+        none;
+
+    margin-top:
+        12px;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    text-align:
+        center;
+
+    color:
+        var(--muted);
+
+    padding:
+        35px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px) {
+
+    .navbar a {
+
+        display:
+            none;
+    }
+
+    section {
+
+        padding:
+            23px 18px;
+    }
+
+    .hero {
+
+        padding:
+            40px 25px;
+    }
+
+    .turn {
+
+        align-items:
+            flex-start;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     NAVIGATION
+======================================================= -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+ERICKA ENGLISH · A1
+</div>
+
+<nav>
+
+<a href="#conversation">
+Conversation
+</a>
+
+<a href="#vocabulary">
+Vocabulary
+</a>
+
+<a href="#grammar">
+Grammar
+</a>
+
+<a href="#pronunciation">
+Pronunciation
+</a>
+
+<a href="#reading">
+Reading
+</a>
+
+<a href="#practice">
+Practice
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- ======================================================
+     UNIT HEADER
+======================================================= -->
+
+<section class="hero">
+
+<div class="eyebrow">
+Unit 1
+</div>
+
+<h1>
+Nice to Meet You!
+</h1>
+
+<p>
+Prazer em conhecer você!
+</p>
+
+<p>
+
+<strong>Lesson Objective</strong>
+
+<br>
+
+Fazer apresentações,
+cumprimentar pessoas,
+falar sobre origem e nacionalidade.
+
+</p>
+
+<span class="badge">
+A1 · Real Life · Real Conversations
+</span>
+
+</section>
+
+
+
+<!-- ======================================================
+     UNIT GOALS
+======================================================= -->
+
+<section>
+
+<h2>
+By the end of this unit...
+</h2>
+
+<div class="grid">
+
+<div class="goal">
+Introduce yourself and other people.
+</div>
+
+<div class="goal">
+Use common greetings in different situations.
+</div>
+
+<div class="goal">
+Ask and answer personal information questions.
+</div>
+
+<div class="goal">
+Talk about countries and nationalities.
+</div>
+
+<div class="goal">
+Use the verb to be in introductions.
+</div>
+
+<div class="goal">
+Speak confidently in first conversations.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CONVERSATION
+======================================================= -->
+
+<section id="conversation">
+
+<h2>
+💬 Conversation
+</h2>
+
+<p>
+Lucas and Emma meet for the first time.
+Listen to the conversation and then practice with a partner.
+</p>
+
+
+<div class="conversation">
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+Lucas
+</span>
+
+<span>
+Hi! My name is Lucas.
+What’s your name?
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+Emma
+</span>
+
+<span>
+Hello, Lucas!
+My name is Emma.
+Nice to meet you.
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+Lucas
+</span>
+
+<span>
+Nice to meet you too, Emma.
+Where are you from?
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+Emma
+</span>
+
+<span>
+I’m from Canada.
+I’m Canadian.
+What about you?
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+Lucas
+</span>
+
+<span>
+I’m from Brazil.
+I’m Brazilian.
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+Emma
+</span>
+
+<span>
+That’s interesting!
+Are you a student?
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+Lucas
+</span>
+
+<span>
+Yes, I am.
+I’m an English student.
+And you?
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+Emma
+</span>
+
+<span>
+Yes, I am.
+I study English too.
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+Lucas
+</span>
+
+<span>
+Great!
+How are you today?
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+Emma
+</span>
+
+<span>
+I’m very good, thank you.
+How about you?
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+Lucas
+</span>
+
+<span>
+I’m great!
+It’s nice talking to you.
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+Emma
+</span>
+
+<span>
+Yes, it is.
+See you later!
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+Lucas
+</span>
+
+<span>
+See you!
+</span>
+
+</div>
+
+</div>
+
+
+<!-- AUDIO -->
+
+<div class="audio-player">
+
+<p>
+🎧 <strong>Listen to the conversation</strong>
+</p>
+
+<audio controls preload="metadata">
+
+<source
+src="A1_U1_conversation1.mp3"
+type="audio/mpeg">
+
+Your browser does not support audio playback.
+
+</audio>
+
+</div>
+
+
+</section>
+
+
+
+<!-- ======================================================
+     VOCABULARY
+======================================================= -->
+
+<section id="vocabulary">
+
+<h2>
+📚 Vocabulary
+</h2>
+
+<p>
+Click 🔊 to hear the English expression.
+</p>
+
+
+<div class="vocabulary-grid">
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>hello</strong>
+<span class="pronunciation">
+/he-LOU/
+</span>
+<span class="translation">
+olá
+</span>
+</div>
+
+<button
+class="speak"
+data-text="hello">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>hi</strong>
+<span class="pronunciation">
+/HAI/
+</span>
+<span class="translation">
+oi
+</span>
+</div>
+
+<button class="speak"
+data-text="hi">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>good morning</strong>
+<span class="pronunciation">
+/gud MOR-nin/
+</span>
+<span class="translation">
+bom dia
+</span>
+</div>
+
+<button class="speak"
+data-text="good morning">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>good afternoon</strong>
+<span class="pronunciation">
+/gud af-ter-NUN/
+</span>
+<span class="translation">
+boa tarde
+</span>
+</div>
+
+<button class="speak"
+data-text="good afternoon">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>good evening</strong>
+<span class="pronunciation">
+/gud II-venin/
+</span>
+<span class="translation">
+boa noite (ao chegar)
+</span>
+</div>
+
+<button class="speak"
+data-text="good evening">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>good night</strong>
+<span class="pronunciation">
+/gud NAIT/
+</span>
+<span class="translation">
+boa noite (ao sair/dormir)
+</span>
+</div>
+
+<button class="speak"
+data-text="good night">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>nice to meet you</strong>
+<span class="pronunciation">
+/nais tu MIIT iu/
+</span>
+<span class="translation">
+prazer em conhecer você
+</span>
+</div>
+
+<button class="speak"
+data-text="nice to meet you">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>nice to meet you too</strong>
+<span class="pronunciation">
+/nais tu MIIT iu tu/
+</span>
+<span class="translation">
+prazer em conhecer você também
+</span>
+</div>
+
+<button class="speak"
+data-text="nice to meet you too">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>name</strong>
+<span class="pronunciation">
+/NEIM/
+</span>
+<span class="translation">
+nome
+</span>
+</div>
+
+<button class="speak"
+data-text="name">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>country</strong>
+<span class="pronunciation">
+/KAN-tri/
+</span>
+<span class="translation">
+país
+</span>
+</div>
+
+<button class="speak"
+data-text="country">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>nationality</strong>
+<span class="pronunciation">
+/na-sho-NA-li-ti/
+</span>
+<span class="translation">
+nacionalidade
+</span>
+</div>
+
+<button class="speak"
+data-text="nationality">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>Brazil</strong>
+<span class="pronunciation">
+/bra-ZIL/
+</span>
+<span class="translation">
+Brasil
+</span>
+</div>
+
+<button class="speak"
+data-text="Brazil">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>Brazilian</strong>
+<span class="pronunciation">
+/bra-ZI-li-an/
+</span>
+<span class="translation">
+brasileiro(a)
+</span>
+</div>
+
+<button class="speak"
+data-text="Brazilian">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>Canada</strong>
+<span class="pronunciation">
+/KA-na-da/
+</span>
+<span class="translation">
+Canadá
+</span>
+</div>
+
+<button class="speak"
+data-text="Canada">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>Canadian</strong>
+<span class="pronunciation">
+/ka-NEI-di-an/
+</span>
+<span class="translation">
+canadense
+</span>
+</div>
+
+<button class="speak"
+data-text="Canadian">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>student</strong>
+<span class="pronunciation">
+/STU-dent/
+</span>
+<span class="translation">
+estudante
+</span>
+</div>
+
+<button class="speak"
+data-text="student">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>teacher</strong>
+<span class="pronunciation">
+/TII-tcher/
+</span>
+<span class="translation">
+professor(a)
+</span>
+</div>
+
+<button class="speak"
+data-text="teacher">
+🔊
+</button>
+
+</div>
+
+
+
+<div class="vocabulary-card">
+
+<div>
+<strong>friend</strong>
+<span class="pronunciation">
+/FREND/
+</span>
+<span class="translation">
+amigo(a)
+</span>
+</div>
+
+<button class="speak"
+data-text="friend">
+🔊
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     HOW ARE YOU?
+======================================================= -->
+
+<section>
+
+<h2>
+How are you?
+</h2>
+
+<div class="grid">
+
+<div class="note">
+<strong>How are you?</strong>
+<br>
+Como você está?
+</div>
+
+<div class="note">
+<strong>How’s it going?</strong>
+<br>
+Como vão as coisas?
+</div>
+
+<div class="note">
+<strong>How are things?</strong>
+<br>
+Como estão as coisas?
+</div>
+
+<div class="note">
+<strong>How have you been?</strong>
+<br>
+Como você tem estado?
+</div>
+
+<div class="note">
+<strong>What’s up?</strong>
+<br>
+E aí?
+</div>
+
+</div>
+
+
+<h3>
+Common Answers
+</h3>
+
+<p>
+
+<strong>I’m fine.</strong>
+·
+<strong>I’m good.</strong>
+·
+<strong>I’m great.</strong>
+·
+<strong>I’m pretty good.</strong>
+·
+<strong>Not bad.</strong>
+·
+<strong>I’m tired.</strong>
+
+</p>
+
+</section>
+
+
+
+<!-- ======================================================
+     GRAMMAR
+======================================================= -->
+
+<section id="grammar">
+
+<h2>
+🔤 Grammar Focus
+</h2>
+
+<h3>
+Verb to be
+</h3>
+
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Verb</th>
+<th>Short Form</th>
+</tr>
+
+<tr>
+<td>I</td>
+<td>am</td>
+<td>I’m</td>
+</tr>
+
+<tr>
+<td>You</td>
+<td>are</td>
+<td>You’re</td>
+</tr>
+
+<tr>
+<td>He / She</td>
+<td>is</td>
+<td>He’s / She’s</td>
+</tr>
+
+<tr>
+<td>We</td>
+<td>are</td>
+<td>We’re</td>
+</tr>
+
+<tr>
+<td>They</td>
+<td>are</td>
+<td>They’re</td>
+</tr>
+
+</table>
+
+
+<h3>
+Basic Questions
+</h3>
+
+<div class="grid">
+
+<div class="note">
+
+<strong>
+What’s your name?
+</strong>
+
+<br>
+
+I’m Lucas.
+
+</div>
+
+
+<div class="note">
+
+<strong>
+Where are you from?
+</strong>
+
+<br>
+
+I’m from Brazil.
+
+</div>
+
+
+<div class="note">
+
+<strong>
+What’s your nationality?
+</strong>
+
+<br>
+
+I’m Brazilian.
+
+</div>
+
+
+<div class="note">
+
+<strong>
+How are you?
+</strong>
+
+<br>
+
+I’m fine, thanks.
+
+</div>
+
+</div>
+
+
+<h3>
+Good Evening vs. Good Night
+</h3>
+
+<div class="grid">
+
+<div class="note">
+
+<strong>
+Good evening
+</strong>
+
+<br>
+
+Greeting
+
+</div>
+
+
+<div class="note">
+
+<strong>
+Good night
+</strong>
+
+<br>
+
+Leaving / Sleep
+
+</div>
+
+</div>
+
+
+<h3>
+Countries and Nationalities
+</h3>
+
+
+<table>
+
+<tr>
+<th>Country</th>
+<th>Nationality</th>
+</tr>
+
+<tr>
+<td>Brazil</td>
+<td>Brazilian</td>
+</tr>
+
+<tr>
+<td>Canada</td>
+<td>Canadian</td>
+</tr>
+
+<tr>
+<td>Mexico</td>
+<td>Mexican</td>
+</tr>
+
+<tr>
+<td>Italy</td>
+<td>Italian</td>
+</tr>
+
+<tr>
+<td>France</td>
+<td>French</td>
+</tr>
+
+<tr>
+<td>Japan</td>
+<td>Japanese</td>
+</tr>
+
+</table>
+
+
+<div class="note">
+
+<strong>
+Common Patterns
+</strong>
+
+<br><br>
+
+<strong>-an / -ian</strong>
+Brazilian, Canadian
+
+<br>
+
+<strong>-ese</strong>
+Japanese, Chinese
+
+<br>
+
+<strong>-ish</strong>
+English, Spanish
+
+<br>
+
+<strong>Irregular</strong>
+French, German, Dutch
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     PRONUNCIATION
+======================================================= -->
+
+<section id="pronunciation">
+
+<h2>
+🗣️ Pronunciation
+</h2>
+
+<h3>
+Pronunciation Tips
+</h3>
+
+<div class="grid">
+
+<div class="note">
+<strong>Hello</strong>
+<br>
+RE-LOU
+</div>
+
+<div class="note">
+<strong>Hi</strong>
+<br>
+HAI
+</div>
+
+<div class="note">
+<strong>Nice to meet you</strong>
+<br>
+NAIS TU MIIT IU
+</div>
+
+<div class="note">
+<strong>What’s your name?</strong>
+<br>
+UOTS IOR NEIM?
+</div>
+
+<div class="note">
+<strong>Where are you from?</strong>
+<br>
+UER AR IU FROM?
+</div>
+
+<div class="note">
+<strong>I’m from Brazil.</strong>
+<br>
+AIM FROM BRA-ZIL
+</div>
+
+<div class="note">
+<strong>I’m Brazilian.</strong>
+<br>
+AIM BRA-ZI-LI-AN
+</div>
+
+</div>
+
+
+<h3>
+1. The sound of TH
+</h3>
+
+<p>
+
+The sound of
+<strong>th</strong>
+does not exist in Portuguese.
+
+</p>
+
+<p>
+
+<strong>thank</strong>
+THENK
+
+<br>
+
+<strong>three</strong>
+THRII
+
+<br>
+
+<strong>think</strong>
+THINK
+
+</p>
+
+
+<h3>
+2. Long vowel sounds
+</h3>
+
+<p>
+
+Some English vowels are longer than Portuguese vowels.
+
+</p>
+
+<p>
+
+<strong>name</strong>
+NEIM
+
+&nbsp; · &nbsp;
+
+<strong>meet</strong>
+MIIT
+
+&nbsp; · &nbsp;
+
+<strong>you</strong>
+IU
+
+</p>
+
+</section>
+
+
+
+<!-- ======================================================
+     READING
+======================================================= -->
+
+<section id="reading">
+
+<h2>
+📖 Reading
+</h2>
+
+<h3>
+My First Conversation
+</h3>
+
+<p>
+
+Lucas is a new student at an international school.
+On his first day, he meets Emma.
+
+</p>
+
+
+<div class="conversation">
+
+<div class="turn lucas">
+
+<span class="speaker">
+A
+</span>
+
+<span>
+Hello! My name is Lucas.
+What’s your name?
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+B
+</span>
+
+<span>
+Hi! I’m Emma.
+Nice to meet you.
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+A
+</span>
+
+<span>
+Nice to meet you too.
+Where are you from?
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+B
+</span>
+
+<span>
+I’m from Canada.
+I’m Canadian.
+What about you?
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+A
+</span>
+
+<span>
+I’m from Brazil.
+I’m Brazilian.
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+B
+</span>
+
+<span>
+That’s great!
+Are you a student?
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+A
+</span>
+
+<span>
+Yes, I am.
+I’m an English student.
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+B
+</span>
+
+<span>
+How are you today?
+</span>
+
+</div>
+
+
+<div class="turn lucas">
+
+<span class="speaker">
+A
+</span>
+
+<span>
+I’m very good, thank you.
+</span>
+
+</div>
+
+
+<div class="turn emma">
+
+<span class="speaker">
+B
+</span>
+
+<span>
+Great!
+Welcome to our school.
+</span>
+
+</div>
+
+</div>
+
+
+<h3>
+Reading Comprehension
+</h3>
+
+<div class="practice">
+
+<p>
+1. What’s the boy’s name?
+</p>
+
+<input
+placeholder="Your answer">
+
+
+<p>
+2. Where is Emma from?
+</p>
+
+<input
+placeholder="Your answer">
+
+
+<p>
+3. What is Lucas’ nationality?
+</p>
+
+<input
+placeholder="Your answer">
+
+
+<p>
+4. Are Lucas and Emma students?
+</p>
+
+<input
+placeholder="Your answer">
+
+
+<p>
+5. How is Lucas today?
+</p>
+
+<input
+placeholder="Your answer">
+
+
+<br><br>
+
+<button
+class="primary"
+onclick="showAnswers()">
+
+Show answers
+
+</button>
+
+
+<div
+class="answer"
+id="readingAnswers">
+
+1. Lucas.
+<br>
+2. Canada.
+<br>
+3. Brazilian.
+<br>
+4. Yes.
+<br>
+5. He is very good.
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     SPEAKING
+======================================================= -->
+
+<section>
+
+<h2>
+🎤 Speaking
+</h2>
+
+<p>
+Work with a partner.
+Practice a first conversation.
+</p>
+
+
+<div class="grid">
+
+<div class="note">
+
+<strong>
+Student A
+</strong>
+
+<br><br>
+
+Say hello.
+
+<br>
+
+Ask your partner’s name.
+
+<br>
+
+Ask where your partner is from.
+
+<br>
+
+Ask about nationality.
+
+<br>
+
+Ask:
+<strong>How are you?</strong>
+
+</div>
+
+
+<div class="note">
+
+<strong>
+Student B
+</strong>
+
+<br><br>
+
+Answer the questions
+and introduce yourself.
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     WRITING
+======================================================= -->
+
+<section>
+
+<h2>
+✍️ Writing
+</h2>
+
+<h3>
+My Introduction
+</h3>
+
+<p>
+
+Write a short paragraph
+introducing yourself.
+
+</p>
+
+<ul>
+
+<li>
+What’s your name?
+</li>
+
+<li>
+Where are you from?
+</li>
+
+<li>
+What is your nationality?
+</li>
+
+<li>
+Are you a student?
+</li>
+
+<li>
+How are you today?
+</li>
+
+</ul>
+
+
+<textarea
+placeholder="Write your introduction here...">
+</textarea>
+
+</section>
+
+
+
+<!-- ======================================================
+     PRACTICE
+======================================================= -->
+
+<section id="practice">
+
+<h2>
+📝 Practice & Review
+</h2>
+
+
+<div class="practice">
+
+<p>
+
+<strong>
+Complete the sentence:
+</strong>
+
+</p>
+
+<p>
+
+I
+<select id="grammarAnswer">
+
+<option value="">
+Choose...
+</option>
+
+<option value="am">
+am
+</option>
+
+<option value="is">
+is
+</option>
+
+<option value="are">
+are
+</option>
+
+</select>
+
+from Brazil.
+
+</p>
+
+
+<button
+class="primary"
+onclick="checkGrammar()">
+
+Check Answer
+
+</button>
+
+
+<div
+class="answer"
+id="grammarResult">
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+Ericka English ·
+English Book A1 ·
+Unit 1
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   TEXT TO SPEECH
+========================================================= */
+
+function speak(text) {
+
+    if (!window.speechSynthesis) {
+
+        alert(
+            "Speech synthesis is not supported by this browser."
+        );
+
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const voice =
+        new SpeechSynthesisUtterance(text);
+
+    voice.lang =
+        "en-US";
+
+    voice.rate =
+        0.82;
+
+    voice.pitch =
+        1;
+
+    speechSynthesis.speak(voice);
+}
+
+
+/* Vocabulary buttons */
+
+document
+.querySelectorAll(".speak")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            speak(
+                button.dataset.text
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   DIALOGUE AUDIO
+========================================================= */
+
+const dialogue =
+
+"Hi! My name is Lucas. What’s your name? " +
+
+"Hello, Lucas! My name is Emma. Nice to meet you. " +
+
+"Nice to meet you too, Emma. Where are you from? " +
+
+"I’m from Canada. I’m Canadian. What about you? " +
+
+"I’m from Brazil. I’m Brazilian. " +
+
+"That’s interesting! Are you a student? " +
+
+"Yes, I am. I’m an English student. And you? " +
+
+"Yes, I am. I study English too. " +
+
+"Great! How are you today? " +
+
+"I’m very good, thank you. How about you? " +
+
+"I’m great! It’s nice talking to you. " +
+
+"Yes, it is. See you later! " +
+
+"See you!";
+
+
+document
+.getElementById("readDialogue")
+.addEventListener(
+    "click",
+    () => speak(dialogue)
+);
+
+
+document
+.getElementById("stopSpeech")
+.addEventListener(
+    "click",
+    () => speechSynthesis.cancel()
+);
+
+
+/* =========================================================
+   READING ANSWERS
+========================================================= */
+
+function showAnswers() {
+
+    document
+    .getElementById(
+        "readingAnswers"
+    )
+    .style.display =
+        "block";
+}
+
+
+/* =========================================================
+   GRAMMAR EXERCISE
+========================================================= */
+
+function checkGrammar() {
+
+    const answer =
+        document
+        .getElementById(
+            "grammarAnswer"
+        )
+        .value;
+
+    const result =
+        document
+        .getElementById(
+            "grammarResult"
+        );
+
+    result.style.display =
+        "block";
+
+    if (answer === "am") {
+
+        result.innerHTML =
+            "Correct! ✓";
+
+    } else {
+
+        result.innerHTML =
+            "Try again. The correct answer is <strong>am</strong>.";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
