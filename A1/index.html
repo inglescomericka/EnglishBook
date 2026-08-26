@@ -1,1 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>English Book A1 — Beginner</title>
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        #f1f4f9;
+
+    color:
+        #17233b;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+
+    background:
+        #17233b;
+
+    color:
+        white;
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        100;
+
+}
+
+.navbar {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+    padding:
+        15px 20px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+}
+
+.logo {
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+
+}
+
+.home-link {
+
+    color:
+        white;
+
+    text-decoration:
+        none;
+
+    font-size:
+        .9rem;
+
+    opacity:
+        .9;
+
+}
+
+.home-link:hover {
+
+    opacity:
+        1;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #17233b,
+            #2857d9
+        );
+
+    color:
+        white;
+
+    padding:
+        70px 25px;
+
+}
+
+.hero-content {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+}
+
+.level-label {
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        4px;
+
+    font-size:
+        .8rem;
+
+    font-weight:
+        800;
+
+    opacity:
+        .8;
+
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            6rem
+        );
+
+    line-height:
+        1;
+
+    margin:
+        10px 0;
+
+}
+
+.hero h2 {
+
+    font-size:
+        1.5rem;
+
+    font-weight:
+        400;
+
+    margin:
+        0 0 20px;
+
+}
+
+.hero p {
+
+    max-width:
+        650px;
+
+    font-size:
+        1.1rem;
+
+    opacity:
+        .9;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+
+    max-width:
+        1100px;
+
+    margin:
+        40px auto;
+
+    padding:
+        0 20px;
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-card {
+
+    background:
+        white;
+
+    border-radius:
+        20px;
+
+    padding:
+        25px;
+
+    margin-bottom:
+        35px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.06);
+
+}
+
+.progress-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        10px;
+
+}
+
+.progress-header strong {
+
+    font-size:
+        1.1rem;
+
+}
+
+.progress-bar {
+
+    height:
+        10px;
+
+    background:
+        #e5e9f0;
+
+    border-radius:
+        20px;
+
+    overflow:
+        hidden;
+
+}
+
+.progress-fill {
+
+    width:
+        5%;
+
+    height:
+        100%;
+
+    background:
+        #2857d9;
+
+    border-radius:
+        20px;
+
+}
+
+
+/* =========================================================
+   UNIT TITLE
+========================================================= */
+
+.units-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        end;
+
+    margin-bottom:
+        20px;
+
+}
+
+.units-header h2 {
+
+    margin:
+        0;
+
+    font-size:
+        2rem;
+
+}
+
+.units-header p {
+
+    margin:
+        0;
+
+    color:
+        #687386;
+
+}
+
+
+/* =========================================================
+   UNIT GRID
+========================================================= */
+
+.units {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                280px,
+                1fr
+            )
+        );
+
+    gap:
+        22px;
+
+}
+
+
+/* =========================================================
+   UNIT CARD
+========================================================= */
+
+.unit-card {
+
+    background:
+        white;
+
+    border-radius:
+        22px;
+
+    padding:
+        25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.07);
+
+    transition:
+        .2s;
+
+    text-decoration:
+        none;
+
+    color:
+        #17233b;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+}
+
+.unit-card:hover {
+
+    transform:
+        translateY(
+            -5px
+        );
+
+    box-shadow:
+        0 18px 35px
+        rgba(0,0,0,.12);
+
+}
+
+
+/* UNIT NUMBER */
+
+.unit-number {
+
+    font-size:
+        3rem;
+
+    font-weight:
+        900;
+
+    color:
+        #2857d9;
+
+    line-height:
+        1;
+
+}
+
+
+/* UNIT CARD CONTENT */
+
+.unit-card h3 {
+
+    font-size:
+        1.4rem;
+
+    margin:
+        15px 0 5px;
+
+}
+
+.unit-subtitle {
+
+    color:
+        #687386;
+
+    margin-bottom:
+        18px;
+
+}
+
+.unit-topics {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+}
+
+.topic {
+
+    background:
+        #edf3ff;
+
+    color:
+        #2857d9;
+
+    padding:
+        5px 9px;
+
+    border-radius:
+        8px;
+
+    font-size:
+        .78rem;
+
+    font-weight:
+        700;
+
+}
+
+
+/* OPEN BUTTON */
+
+.open-unit {
+
+    display:
+        inline-block;
+
+    margin-top:
+        22px;
+
+    background:
+        #2857d9;
+
+    color:
+        white;
+
+    padding:
+        10px 17px;
+
+    border-radius:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* =========================================================
+   LOCKED UNITS
+========================================================= */
+
+.unit-card.locked {
+
+    opacity:
+        .65;
+
+    cursor:
+        default;
+
+}
+
+.unit-card.locked:hover {
+
+    transform:
+        none;
+
+}
+
+.locked .unit-number {
+
+    color:
+        #9aa4b2;
+
+}
+
+.locked .topic {
+
+    background:
+        #f0f2f5;
+
+    color:
+        #7a8492;
+
+}
+
+.locked .open-unit {
+
+    background:
+        #9aa4b2;
+
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.bottom-navigation {
+
+    margin-top:
+        45px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+}
+
+.bottom-navigation a {
+
+    background:
+        white;
+
+    color:
+        #17233b;
+
+    text-decoration:
+        none;
+
+    padding:
+        13px 18px;
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.05);
+
+}
+
+.bottom-navigation a:hover {
+
+    color:
+        #2857d9;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    margin-top:
+        70px;
+
+    background:
+        #17233b;
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+    padding:
+        35px 20px;
+
+}
+
+footer p {
+
+    margin:
+        5px;
+
+    opacity:
+        .7;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px) {
+
+    .hero {
+
+        padding:
+            50px 20px;
+
+    }
+
+    .units-header {
+
+        display:
+            block;
+
+    }
+
+    .units-header p {
+
+        margin-top:
+            5px;
+
+    }
+
+    .bottom-navigation {
+
+        flex-direction:
+            column;
+
+    }
+
+    .bottom-navigation a {
+
+        text-align:
+            center;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- ======================================================
+     HEADER
+======================================================= -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+ERICKA ENGLISH
+
+</div>
+
+
+<a
+href="../index.html"
+class="home-link">
+
+← English Book
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="level-label">
+
+English Book · Level
+
+</div>
+
+<h1>
+
+A1
+
+</h1>
+
+<h2>
+
+Beginner
+
+</h2>
+
+<p>
+
+Build your English from the beginning.
+
+Learn essential vocabulary,
+grammar,
+pronunciation
+and everyday communication
+through practical lessons.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     MAIN
+======================================================= -->
+
+<main>
+
+
+<!-- PROGRESS -->
+
+<div class="progress-card">
+
+<div class="progress-header">
+
+<strong>
+Your A1 Progress
+</strong>
+
+<span>
+1 / 20 Units
+</span>
+
+</div>
+
+
+<div class="progress-bar">
+
+<div class="progress-fill">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- UNITS HEADER -->
+
+<div class="units-header">
+
+<div>
+
+<h2>
+A1 Units
+</h2>
+
+<p>
+Choose a unit to start learning.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ======================================================
+     UNITS
+======================================================= -->
+
+<div class="units">
+
+
+<!-- UNIT 1 -->
+
+<a
+href="unit1/index.html"
+class="unit-card">
+
+
+<div class="unit-number">
+
+01
+
+</div>
+
+
+<h3>
+
+Nice to Meet You!
+
+</h3>
+
+
+<div class="unit-subtitle">
+
+Introductions & Greetings
+
+</div>
+
+
+<div class="unit-topics">
+
+<span class="topic">
+Greetings
+</span>
+
+<span class="topic">
+Introductions
+</span>
+
+<span class="topic">
+Countries
+</span>
+
+<span class="topic">
+Nationalities
+</span>
+
+<span class="topic">
+Verb to be
+</span>
+
+</div>
+
+
+<span class="open-unit">
+
+OPEN UNIT →
+
+</span>
+
+
+</a>
+
+
+
+<!-- UNIT 2 -->
+
+<a
+href="unit2/index.html"
+class="unit-card">
+
+
+<div class="unit-number">
+
+02
+
+</div>
+
+
+<h3>
+
+Let's Meet Up!
+
+</h3>
+
+
+<div class="unit-subtitle">
+
+Invitations & Plans
+
+</div>
+
+
+<div class="unit-topics">
+
+<span class="topic">
+Invitations
+</span>
+
+<span class="topic">
+Weekend plans
+</span>
+
+<span class="topic">
+Be going to
+</span>
+
+<span class="topic">
+Time expressions
+</span>
+
+</div>
+
+
+<span class="open-unit">
+
+OPEN UNIT →
+
+</span>
+
+
+</a>
+
+
+
+<!-- UNIT 3 -->
+
+<div class="unit-card locked">
+
+
+<div class="unit-number">
+
+03
+
+</div>
+
+
+<h3>
+
+Coming Soon
+
+</h3>
+
+
+<div class="unit-subtitle">
+
+New A1 lesson
+
+</div>
+
+
+<div class="unit-topics">
+
+<span class="topic">
+Vocabulary
+</span>
+
+<span class="topic">
+Grammar
+</span>
+
+<span class="topic">
+Conversation
+</span>
+
+</div>
+
+
+<span class="open-unit">
+
+🔒 COMING SOON
+
+</span>
+
+
+</div>
+
+
+
+<!-- UNIT 4 -->
+
+<div class="unit-card locked">
+
+
+<div class="unit-number">
+
+04
+
+</div>
+
+
+<h3>
+
+Coming Soon
+
+</h3>
+
+
+<div class="unit-subtitle">
+
+New A1 lesson
+
+</div>
+
+
+<div class="unit-topics">
+
+<span class="topic">
+Vocabulary
+</span>
+
+<span class="topic">
+Grammar
+</span>
+
+<span class="topic">
+Speaking
+</span>
+
+</div>
+
+
+<span class="open-unit">
+
+🔒 COMING SOON
+
+</span>
+
+
+</div>
+
+
+
+<!-- UNIT 5 -->
+
+<div class="unit-card locked">
+
+
+<div class="unit-number">
+
+05
+
+</div>
+
+
+<h3>
+
+Coming Soon
+
+</h3>
+
+
+<div class="unit-subtitle">
+
+New A1 lesson
+
+</div>
+
+
+<div class="unit-topics">
+
+<span class="topic">
+Reading
+</span>
+
+<span class="topic">
+Grammar
+</span>
+
+<span class="topic">
+Writing
+</span>
+
+</div>
+
+
+<span class="open-unit">
+
+🔒 COMING SOON
+
+</span>
+
+
+</div>
+
+
+
+<!-- UNIT 6 -->
+
+<div class="unit-card locked">
+
+
+<div class="unit-number">
+
+06
+
+</div>
+
+
+<h3>
+
+Coming Soon
+
+</h3>
+
+
+<div class="unit-subtitle">
+
+New A1 lesson
+
+</div>
+
+
+<div class="unit-topics">
+
+<span class="topic">
+Conversation
+</span>
+
+<span class="topic">
+Vocabulary
+</span>
+
+<span class="topic">
+Practice
+</span>
+
+</div>
+
+
+<span class="open-unit">
+
+🔒 COMING SOON
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- ======================================================
+     NAVIGATION
+======================================================= -->
+
+<div class="bottom-navigation">
+
+<a href="../index.html">
+
+← Back to Levels
+
+</a>
+
+
+<a href="unit1/index.html">
+
+Start Unit 1 →
+
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+<strong>
+ERICKA ENGLISH
+</strong>
+
+<p>
+
+English Book · A1 Beginner
+
+</p>
+
+<p>
+
+Learn English step by step.
+
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
